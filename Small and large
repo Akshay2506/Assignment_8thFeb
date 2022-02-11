@@ -1,0 +1,22 @@
+// Program to print second smallest and second largest in an array
+let arr=[4,7,2,67,43,88,123,45,78,98];
+let c,d;
+
+let a=Math.max(...arr);
+let b=Math.min(...arr);
+
+for(let i=0;i<=arr.length;i++)
+{
+    if(a===arr[i])
+    c=i;
+    if(b===arr[i])
+    d=i;
+}
+
+arr.splice(c,1);
+arr.splice(d,1);
+
+let second_largest=Math.max(...arr);
+let second_smallest=Math.min(...arr);
+
+console.log(`Second Largest= ${second_largest} and Second Smallest= ${second_smallest}`);
